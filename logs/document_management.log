@@ -1,0 +1,853 @@
+2025-05-11 08:59:34,325 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 08:59:37,703 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 08:59:37,703 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 08:59:37,703 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 08:59:37,703 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 08:59:37,704 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 08:59:37,704 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:13:57,456 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 09:13:57,456 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 09:13:57,456 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 09:13:57,462 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,462 - document_management.processor - WARNING - Skipping data extraction for grn_GRN4725.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,465 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,466 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 09:13:57,467 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,467 - document_management.processor - WARNING - Skipping data extraction for grn_GRN7809.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,473 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,473 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 09:13:57,477 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,477 - document_management.processor - WARNING - Skipping data extraction for grn_GRN8816.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,480 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,481 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 09:13:57,484 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,485 - document_management.processor - WARNING - Skipping data extraction for invoice_INV527356.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,488 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,488 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 09:13:57,492 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,493 - document_management.processor - WARNING - Skipping data extraction for invoice_INV909500.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,496 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,496 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 09:13:57,503 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,503 - document_management.processor - WARNING - Skipping data extraction for invoice_INV973631.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,508 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,509 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 09:13:57,513 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,514 - document_management.processor - WARNING - Skipping data extraction for invoice_INV98246.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,518 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,518 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 09:13:57,521 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,522 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO23502.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,526 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,526 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 09:13:57,531 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,532 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO64951.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,535 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,535 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 09:13:57,540 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,541 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO88998.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,545 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,545 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 09:13:57,550 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,550 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO89100.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,568 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,569 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 09:13:57,575 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:13:57,575 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO92991.pdf as it was classified as 'unknown'.
+2025-05-11 09:13:57,579 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:13:57,579 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 09:13:57,580 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 09:15:13,387 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 09:15:16,993 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 09:15:16,993 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 09:15:16,993 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 09:15:16,993 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 09:15:16,993 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 09:15:16,993 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:16:00,175 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 09:16:03,965 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 09:16:03,965 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 09:16:03,965 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 09:16:03,965 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 09:16:03,965 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 09:16:03,966 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:18:05,283 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 09:18:05,284 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 09:18:05,284 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 09:18:05,284 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,284 - document_management.processor - WARNING - Skipping data extraction for grn_GRN4725.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,284 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,284 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 09:18:05,290 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,290 - document_management.processor - WARNING - Skipping data extraction for grn_GRN7809.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,293 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,293 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 09:18:05,293 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,293 - document_management.processor - WARNING - Skipping data extraction for grn_GRN8816.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,298 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,299 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 09:18:05,299 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,300 - document_management.processor - WARNING - Skipping data extraction for invoice_INV527356.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,302 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,302 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 09:18:05,302 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,302 - document_management.processor - WARNING - Skipping data extraction for invoice_INV909500.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,307 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,308 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 09:18:05,309 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,309 - document_management.processor - WARNING - Skipping data extraction for invoice_INV973631.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,312 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,313 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 09:18:05,314 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,314 - document_management.processor - WARNING - Skipping data extraction for invoice_INV98246.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,318 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,318 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 09:18:05,319 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,320 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO23502.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,323 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,323 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 09:18:05,324 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,324 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO64951.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,328 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,328 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 09:18:05,328 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,330 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO88998.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,333 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,334 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 09:18:05,335 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,335 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO89100.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,337 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,337 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 09:18:05,341 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-05-11 09:18:05,341 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO92991.pdf as it was classified as 'unknown'.
+2025-05-11 09:18:05,345 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:18:05,345 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 09:18:05,346 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 09:25:30,215 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 09:25:33,663 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 09:25:33,663 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 09:25:33,663 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 09:25:33,663 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 09:25:33,663 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 09:25:33,665 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:26:27,647 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 09:26:31,025 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 09:26:31,025 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 09:26:31,026 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 09:26:31,026 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 09:26:31,026 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 09:26:31,026 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:33:33,879 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 09:33:33,879 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 09:33:33,879 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 09:33:34,029 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,029 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,029 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: unknown
+2025-05-11 09:33:34,029 - document_management.processor - WARNING - Skipping data extraction for grn_GRN4725.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,036 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,037 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 09:33:34,285 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,285 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,285 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: unknown
+2025-05-11 09:33:34,285 - document_management.processor - WARNING - Skipping data extraction for grn_GRN7809.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,285 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,285 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 09:33:34,524 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,524 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,524 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: unknown
+2025-05-11 09:33:34,524 - document_management.processor - WARNING - Skipping data extraction for grn_GRN8816.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,535 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,535 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 09:33:34,667 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,667 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,667 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: unknown
+2025-05-11 09:33:34,667 - document_management.processor - WARNING - Skipping data extraction for invoice_INV527356.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,667 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,667 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 09:33:34,818 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,818 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,818 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: unknown
+2025-05-11 09:33:34,818 - document_management.processor - WARNING - Skipping data extraction for invoice_INV909500.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,818 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,818 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 09:33:34,977 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:34,977 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:34,977 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: unknown
+2025-05-11 09:33:34,977 - document_management.processor - WARNING - Skipping data extraction for invoice_INV973631.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:34,977 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:34,977 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 09:33:35,261 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:35,261 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:35,261 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: unknown
+2025-05-11 09:33:35,261 - document_management.processor - WARNING - Skipping data extraction for invoice_INV98246.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:35,268 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:35,268 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 09:33:35,402 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:35,402 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:35,402 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: unknown
+2025-05-11 09:33:35,402 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO23502.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:35,410 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:35,410 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 09:33:35,553 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:35,553 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:35,553 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: unknown
+2025-05-11 09:33:35,553 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO64951.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:35,553 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:35,553 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 09:33:35,702 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:35,702 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:35,702 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: unknown
+2025-05-11 09:33:35,702 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO88998.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:35,710 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:35,710 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 09:33:35,863 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:35,864 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:35,864 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: unknown
+2025-05-11 09:33:35,864 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO89100.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:35,866 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:35,867 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 09:33:36,036 - document_management.ml_models - ERROR - Error during text extraction: 'list' object has no attribute 'save'
+2025-05-11 09:33:36,036 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:33:36,036 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: unknown
+2025-05-11 09:33:36,037 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO92991.pdf as it was classified as 'unknown'.
+2025-05-11 09:33:36,039 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:33:36,039 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 09:33:36,040 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 09:35:29,151 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 09:35:32,646 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 09:35:32,646 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 09:35:32,646 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 09:35:32,646 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 09:35:32,650 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 09:35:32,650 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 09:35:50,296 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 09:35:50,297 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 09:35:50,297 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 09:35:50,455 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:50,455 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:50,455 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: unknown
+2025-05-11 09:35:50,455 - document_management.processor - WARNING - Skipping data extraction for grn_GRN4725.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:50,458 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:50,458 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 09:35:50,604 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:50,604 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:50,604 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: unknown
+2025-05-11 09:35:50,605 - document_management.processor - WARNING - Skipping data extraction for grn_GRN7809.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:50,607 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:50,607 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 09:35:50,749 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:50,749 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:50,749 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: unknown
+2025-05-11 09:35:50,753 - document_management.processor - WARNING - Skipping data extraction for grn_GRN8816.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:50,755 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:50,755 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 09:35:51,005 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,005 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,005 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: unknown
+2025-05-11 09:35:51,005 - document_management.processor - WARNING - Skipping data extraction for invoice_INV527356.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,005 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,005 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 09:35:51,155 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,155 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,155 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: unknown
+2025-05-11 09:35:51,155 - document_management.processor - WARNING - Skipping data extraction for invoice_INV909500.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,162 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,163 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 09:35:51,311 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,312 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,312 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: unknown
+2025-05-11 09:35:51,312 - document_management.processor - WARNING - Skipping data extraction for invoice_INV973631.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,312 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,312 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 09:35:51,453 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,453 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,453 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: unknown
+2025-05-11 09:35:51,453 - document_management.processor - WARNING - Skipping data extraction for invoice_INV98246.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,462 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,462 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 09:35:51,720 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,720 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,720 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: unknown
+2025-05-11 09:35:51,720 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO23502.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,720 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,720 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 09:35:51,870 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:51,870 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:51,870 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: unknown
+2025-05-11 09:35:51,870 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO64951.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:51,870 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:51,870 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 09:35:52,020 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:52,020 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:52,020 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: unknown
+2025-05-11 09:35:52,020 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO88998.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:52,020 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:52,020 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 09:35:52,170 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:52,170 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:52,170 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: unknown
+2025-05-11 09:35:52,170 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO89100.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:52,170 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:52,178 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 09:35:52,312 - document_management.ml_models - ERROR - Received a list instead of an Image object
+2025-05-11 09:35:52,320 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 09:35:52,320 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: unknown
+2025-05-11 09:35:52,320 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO92991.pdf as it was classified as 'unknown'.
+2025-05-11 09:35:52,320 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 09:35:52,320 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 09:35:52,320 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 10:02:58,257 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:03:02,758 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:03:02,759 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:03:02,759 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:03:02,759 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:03:02,759 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:03:02,760 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:04:44,416 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 10:04:44,417 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 10:04:44,417 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 10:04:44,548 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:44,548 - document_management.processor - WARNING - Skipping data extraction for grn_GRN4725.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:44,548 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:44,548 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 10:04:44,679 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:44,679 - document_management.processor - WARNING - Skipping data extraction for grn_GRN7809.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:44,679 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:44,679 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 10:04:44,817 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:44,818 - document_management.processor - WARNING - Skipping data extraction for grn_GRN8816.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:44,818 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:44,818 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 10:04:44,969 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:44,969 - document_management.processor - WARNING - Skipping data extraction for invoice_INV527356.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:44,969 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:44,969 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 10:04:45,110 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:45,110 - document_management.processor - WARNING - Skipping data extraction for invoice_INV909500.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:45,110 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:45,110 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 10:04:45,365 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:45,366 - document_management.processor - WARNING - Skipping data extraction for invoice_INV973631.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:45,368 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:45,368 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 10:04:45,610 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:45,615 - document_management.processor - WARNING - Skipping data extraction for invoice_INV98246.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:45,618 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:45,618 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 10:04:45,782 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:45,782 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO23502.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:45,782 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:45,782 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 10:04:45,933 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:45,933 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO64951.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:45,933 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:45,933 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 10:04:46,074 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:46,074 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO88998.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:46,074 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:46,074 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 10:04:46,225 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:46,225 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO89100.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:46,226 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:46,226 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 10:04:46,374 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: 'DocumentClassifier' object has no attribute 'classify_document_image'
+2025-05-11 10:04:46,374 - document_management.processor - WARNING - Skipping data extraction for purchase_order_PO92991.pdf as it was classified as 'unknown'.
+2025-05-11 10:04:46,374 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 10:04:46,374 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 10:04:46,374 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 10:05:19,316 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:05:22,729 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:05:22,729 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:05:22,729 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:05:22,729 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:05:22,729 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:05:22,730 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:06:50,542 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 10:06:50,542 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 10:06:50,542 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 10:06:50,725 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:50,725 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:50,725 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: ['unknown']
+2025-05-11 10:06:50,725 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: unhashable type: 'list'
+2025-05-11 10:06:50,725 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:50,725 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:50,725 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN4725.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:50,725 - document_management.processor - ERROR - Error archiving file grn_GRN4725.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:50,733 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 10:06:50,911 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:50,911 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:50,911 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: ['unknown']
+2025-05-11 10:06:50,911 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: unhashable type: 'list'
+2025-05-11 10:06:50,918 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:50,918 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:50,918 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN7809.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:50,919 - document_management.processor - ERROR - Error archiving file grn_GRN7809.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:50,919 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 10:06:51,196 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:51,201 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:51,201 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: ['unknown']
+2025-05-11 10:06:51,201 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: unhashable type: 'list'
+2025-05-11 10:06:51,201 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:51,201 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:51,201 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN8816.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:51,201 - document_management.processor - ERROR - Error archiving file grn_GRN8816.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:51,201 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 10:06:51,384 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:51,384 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:51,384 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: ['unknown']
+2025-05-11 10:06:51,384 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: unhashable type: 'list'
+2025-05-11 10:06:51,392 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:51,392 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:51,392 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV527356.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:51,392 - document_management.processor - ERROR - Error archiving file invoice_INV527356.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:51,392 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 10:06:51,575 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:51,575 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:51,575 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: ['unknown']
+2025-05-11 10:06:51,575 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: unhashable type: 'list'
+2025-05-11 10:06:51,584 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:51,584 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:51,584 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV909500.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:51,584 - document_management.processor - ERROR - Error archiving file invoice_INV909500.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:51,584 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 10:06:51,759 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:51,759 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:51,759 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: ['unknown']
+2025-05-11 10:06:51,759 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: unhashable type: 'list'
+2025-05-11 10:06:51,769 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:51,769 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:51,769 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV973631.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:51,769 - document_management.processor - ERROR - Error archiving file invoice_INV973631.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:51,769 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 10:06:51,942 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:51,942 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:51,942 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: ['unknown']
+2025-05-11 10:06:51,942 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: unhashable type: 'list'
+2025-05-11 10:06:51,951 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:51,951 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:51,951 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV98246.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:51,951 - document_management.processor - ERROR - Error archiving file invoice_INV98246.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:51,956 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 10:06:52,134 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:52,134 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:52,134 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: ['unknown']
+2025-05-11 10:06:52,134 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: unhashable type: 'list'
+2025-05-11 10:06:52,142 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:52,143 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:52,143 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO23502.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:52,143 - document_management.processor - ERROR - Error archiving file purchase_order_PO23502.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:52,144 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 10:06:52,325 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:52,325 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:52,325 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: ['unknown']
+2025-05-11 10:06:52,325 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: unhashable type: 'list'
+2025-05-11 10:06:52,334 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:52,334 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:52,334 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO64951.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:52,335 - document_management.processor - ERROR - Error archiving file purchase_order_PO64951.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:52,335 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 10:06:52,609 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:52,609 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:52,609 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: ['unknown']
+2025-05-11 10:06:52,609 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: unhashable type: 'list'
+2025-05-11 10:06:52,609 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:52,609 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:52,609 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO88998.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:52,617 - document_management.processor - ERROR - Error archiving file purchase_order_PO88998.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:52,617 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 10:06:52,792 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:52,792 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:52,792 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: ['unknown']
+2025-05-11 10:06:52,792 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: unhashable type: 'list'
+2025-05-11 10:06:52,800 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:52,800 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:52,800 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO89100.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:52,800 - document_management.processor - ERROR - Error archiving file purchase_order_PO89100.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:52,801 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 10:06:52,975 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:06:52,975 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:06:52,975 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: ['unknown']
+2025-05-11 10:06:52,975 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: unhashable type: 'list'
+2025-05-11 10:06:52,975 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:06:52,975 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:06:52,975 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO92991.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:06:52,975 - document_management.processor - ERROR - Error archiving file purchase_order_PO92991.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:06:52,983 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 10:06:52,984 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 12, 'reconciliation_errors': 0}}
+2025-05-11 10:07:51,199 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:07:54,694 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:07:54,694 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:07:54,694 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:07:54,694 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:07:54,694 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:07:54,694 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:08:08,759 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:08:12,745 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:08:12,745 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:08:12,745 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:08:12,745 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:08:12,745 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:08:12,745 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:08:21,772 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:08:25,310 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:08:25,310 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:08:25,310 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:08:25,310 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:08:25,310 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:08:25,310 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:08:54,108 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:08:57,761 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:08:57,761 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:08:57,761 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:08:57,761 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:08:57,761 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:08:57,761 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:09:16,095 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:09:20,712 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:09:20,712 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:09:20,712 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:09:20,712 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:09:20,712 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:09:20,712 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:09:29,464 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:09:33,577 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:09:33,578 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:09:33,578 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:09:33,578 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:09:33,578 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:09:33,579 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:09:42,097 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:09:45,603 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:09:45,603 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:09:45,603 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:09:45,603 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:09:45,603 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:09:45,603 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:09:51,662 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 10:09:51,662 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 10:09:51,662 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 10:09:51,862 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:51,864 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:51,865 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: ['unknown']
+2025-05-11 10:09:51,865 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: unhashable type: 'list'
+2025-05-11 10:09:51,871 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:51,871 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:51,871 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN4725.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:51,871 - document_management.processor - ERROR - Error archiving file grn_GRN4725.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:51,872 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 10:09:52,057 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:52,061 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:52,063 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: ['unknown']
+2025-05-11 10:09:52,063 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: unhashable type: 'list'
+2025-05-11 10:09:52,066 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:52,067 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:52,067 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN7809.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:52,068 - document_management.processor - ERROR - Error archiving file grn_GRN7809.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:52,068 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 10:09:52,255 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:52,255 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:52,261 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: ['unknown']
+2025-05-11 10:09:52,261 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: unhashable type: 'list'
+2025-05-11 10:09:52,264 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:52,264 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:52,264 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN8816.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:52,264 - document_management.processor - ERROR - Error archiving file grn_GRN8816.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:52,264 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 10:09:52,453 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:52,453 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:52,453 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: ['unknown']
+2025-05-11 10:09:52,453 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: unhashable type: 'list'
+2025-05-11 10:09:52,462 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:52,462 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:52,462 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV527356.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:52,463 - document_management.processor - ERROR - Error archiving file invoice_INV527356.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:52,463 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 10:09:52,636 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:52,636 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:52,636 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: ['unknown']
+2025-05-11 10:09:52,636 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: unhashable type: 'list'
+2025-05-11 10:09:52,646 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:52,646 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:52,646 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV909500.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:52,647 - document_management.processor - ERROR - Error archiving file invoice_INV909500.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:52,647 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 10:09:52,819 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:52,828 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:52,828 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: ['unknown']
+2025-05-11 10:09:52,828 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: unhashable type: 'list'
+2025-05-11 10:09:52,828 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:52,828 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:52,828 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV973631.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:52,828 - document_management.processor - ERROR - Error archiving file invoice_INV973631.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:52,836 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 10:09:53,011 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:53,017 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:53,017 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: ['unknown']
+2025-05-11 10:09:53,019 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: unhashable type: 'list'
+2025-05-11 10:09:53,019 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:53,019 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:53,019 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV98246.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:53,019 - document_management.processor - ERROR - Error archiving file invoice_INV98246.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:53,019 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 10:09:53,217 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:53,219 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:53,221 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: ['unknown']
+2025-05-11 10:09:53,221 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: unhashable type: 'list'
+2025-05-11 10:09:53,226 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:53,226 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:53,226 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO23502.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:53,227 - document_management.processor - ERROR - Error archiving file purchase_order_PO23502.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:53,227 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 10:09:53,431 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:53,431 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:53,431 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: ['unknown']
+2025-05-11 10:09:53,431 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: unhashable type: 'list'
+2025-05-11 10:09:53,439 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:53,439 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:53,439 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO64951.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:53,439 - document_management.processor - ERROR - Error archiving file purchase_order_PO64951.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:53,439 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 10:09:53,714 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:53,714 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:53,714 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: ['unknown']
+2025-05-11 10:09:53,719 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: unhashable type: 'list'
+2025-05-11 10:09:53,723 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:53,723 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:53,723 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO88998.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:53,723 - document_management.processor - ERROR - Error archiving file purchase_order_PO88998.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:53,723 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 10:09:53,914 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:53,914 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:53,914 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: ['unknown']
+2025-05-11 10:09:53,919 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: unhashable type: 'list'
+2025-05-11 10:09:53,923 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:53,923 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:53,923 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO89100.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:53,923 - document_management.processor - ERROR - Error archiving file purchase_order_PO89100.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:53,923 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 10:09:54,105 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:09:54,106 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:09:54,111 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: ['unknown']
+2025-05-11 10:09:54,111 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: unhashable type: 'list'
+2025-05-11 10:09:54,116 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:09:54,116 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:09:54,116 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO92991.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:09:54,116 - document_management.processor - ERROR - Error archiving file purchase_order_PO92991.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:09:54,117 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 10:09:54,117 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 12, 'reconciliation_errors': 0}}
+2025-05-11 10:13:52,290 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:13:56,020 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:13:56,020 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:13:56,020 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:13:56,020 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:13:56,036 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:13:56,036 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:14:58,936 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:15:03,130 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:15:03,130 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:15:03,130 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:15:03,130 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:15:03,130 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:15:03,130 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:15:16,333 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 10:15:16,333 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 10:15:16,334 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 10:15:16,532 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:16,532 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:16,532 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: ['unknown']
+2025-05-11 10:15:16,540 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: unhashable type: 'list'
+2025-05-11 10:15:16,540 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:16,540 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:16,540 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN4725.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:16,540 - document_management.processor - ERROR - Error archiving file grn_GRN4725.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:16,546 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 10:15:16,827 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:16,827 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:16,831 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: ['unknown']
+2025-05-11 10:15:16,831 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: unhashable type: 'list'
+2025-05-11 10:15:16,835 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:16,835 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:16,835 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN7809.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:16,835 - document_management.processor - ERROR - Error archiving file grn_GRN7809.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:16,837 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 10:15:17,107 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:17,107 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:17,107 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: ['unknown']
+2025-05-11 10:15:17,107 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: unhashable type: 'list'
+2025-05-11 10:15:17,107 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:17,107 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:17,107 - document_management.processor - WARNING - Extraction failed or returned empty for grn_GRN8816.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:17,115 - document_management.processor - ERROR - Error archiving file grn_GRN8816.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:17,115 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 10:15:17,398 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:17,398 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:17,406 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: ['unknown']
+2025-05-11 10:15:17,406 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: unhashable type: 'list'
+2025-05-11 10:15:17,406 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:17,406 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:17,406 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV527356.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:17,406 - document_management.processor - ERROR - Error archiving file invoice_INV527356.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:17,413 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 10:15:17,640 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:17,640 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:17,640 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: ['unknown']
+2025-05-11 10:15:17,640 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: unhashable type: 'list'
+2025-05-11 10:15:17,649 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:17,649 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:17,650 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV909500.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:17,650 - document_management.processor - ERROR - Error archiving file invoice_INV909500.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:17,650 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 10:15:17,863 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:17,865 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:17,866 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: ['unknown']
+2025-05-11 10:15:17,866 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: unhashable type: 'list'
+2025-05-11 10:15:17,870 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:17,871 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:17,871 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV973631.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:17,871 - document_management.processor - ERROR - Error archiving file invoice_INV973631.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:17,872 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 10:15:18,065 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:18,065 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:18,065 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: ['unknown']
+2025-05-11 10:15:18,065 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: unhashable type: 'list'
+2025-05-11 10:15:18,073 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:18,073 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:18,073 - document_management.processor - WARNING - Extraction failed or returned empty for invoice_INV98246.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:18,073 - document_management.processor - ERROR - Error archiving file invoice_INV98246.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:18,078 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 10:15:18,357 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:18,357 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:18,365 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: ['unknown']
+2025-05-11 10:15:18,365 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: unhashable type: 'list'
+2025-05-11 10:15:18,365 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:18,365 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:18,365 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO23502.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:18,365 - document_management.processor - ERROR - Error archiving file purchase_order_PO23502.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:18,365 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 10:15:18,532 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:18,532 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:18,532 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: ['unknown']
+2025-05-11 10:15:18,540 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: unhashable type: 'list'
+2025-05-11 10:15:18,541 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:18,541 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:18,541 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO64951.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:18,541 - document_management.processor - ERROR - Error archiving file purchase_order_PO64951.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:18,545 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 10:15:18,732 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:18,732 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:18,732 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: ['unknown']
+2025-05-11 10:15:18,732 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: unhashable type: 'list'
+2025-05-11 10:15:18,742 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:18,742 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:18,742 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO88998.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:18,742 - document_management.processor - ERROR - Error archiving file purchase_order_PO88998.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:18,743 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 10:15:18,923 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:18,923 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:18,932 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: ['unknown']
+2025-05-11 10:15:18,932 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: unhashable type: 'list'
+2025-05-11 10:15:18,932 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:18,932 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:18,932 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO89100.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:18,932 - document_management.processor - ERROR - Error archiving file purchase_order_PO89100.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:18,939 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 10:15:19,115 - document_management.ml_models - ERROR - Error during text extraction: code=7: unknown image file format
+2025-05-11 10:15:19,123 - document_management.ml_models - WARNING - No text extracted from image
+2025-05-11 10:15:19,123 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: ['unknown']
+2025-05-11 10:15:19,123 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: unhashable type: 'list'
+2025-05-11 10:15:19,123 - document_management.extraction - INFO - Extracting structured data for doc_type: ['unknown'] using PyMuPDFExtractor.
+2025-05-11 10:15:19,123 - document_management.extraction - WARNING - Unknown document type for PyMuPDF extraction: ['unknown']
+2025-05-11 10:15:19,123 - document_management.processor - WARNING - Extraction failed or returned empty for purchase_order_PO92991.pdf: Unknown document type for basic rule-based extraction
+2025-05-11 10:15:19,123 - document_management.processor - ERROR - Error archiving file purchase_order_PO92991.pdf: unsupported operand type(s) for /: 'WindowsPath' and 'list'
+2025-05-11 10:15:19,131 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 10:15:19,132 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 12, 'reconciliation_errors': 0}}
+2025-05-11 10:18:55,759 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:19:00,127 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:19:00,127 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:19:00,127 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:19:00,127 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:19:00,127 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:19:00,127 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:31:41,923 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:31:45,470 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:31:45,470 - document_management.extraction - INFO - Using PyMuPDFExtractor.
+2025-05-11 10:31:45,470 - document_management.extraction - INFO - PyMuPDFExtractor initialized.
+2025-05-11 10:31:45,476 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:31:45,477 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:31:45,477 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:31:45,483 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 10:31:45,484 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 10:31:45,487 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 10:31:45,506 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: goods_received_note
+2025-05-11 10:31:45,512 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,514 - document_management.processor - INFO - Successfully extracted data from grn_GRN4725.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,515 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,515 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,515 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 10:31:45,536 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: goods_received_note
+2025-05-11 10:31:45,542 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,542 - document_management.processor - INFO - Successfully extracted data from grn_GRN7809.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,543 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,546 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,546 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 10:31:45,563 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: goods_received_note
+2025-05-11 10:31:45,567 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,568 - document_management.processor - INFO - Successfully extracted data from grn_GRN8816.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,569 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,572 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,573 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 10:31:45,591 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: goods_received_note
+2025-05-11 10:31:45,594 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,594 - document_management.processor - INFO - Successfully extracted data from invoice_INV527356.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,594 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,594 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,602 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 10:31:45,624 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: goods_received_note
+2025-05-11 10:31:45,630 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,631 - document_management.processor - INFO - Successfully extracted data from invoice_INV909500.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,632 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,633 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,633 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 10:31:45,652 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: goods_received_note
+2025-05-11 10:31:45,656 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,656 - document_management.processor - INFO - Successfully extracted data from invoice_INV973631.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,661 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,662 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,663 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 10:31:45,682 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: goods_received_note
+2025-05-11 10:31:45,688 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,688 - document_management.processor - INFO - Successfully extracted data from invoice_INV98246.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,689 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,691 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,691 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 10:31:45,714 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: goods_received_note
+2025-05-11 10:31:45,722 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,722 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO23502.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,723 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,725 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,726 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 10:31:45,747 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: goods_received_note
+2025-05-11 10:31:45,754 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,754 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO64951.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,756 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,757 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,758 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 10:31:45,781 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: goods_received_note
+2025-05-11 10:31:45,787 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,788 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO88998.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,789 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,791 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,791 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 10:31:45,809 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: goods_received_note
+2025-05-11 10:31:45,816 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,817 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO89100.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,818 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,820 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,820 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 10:31:45,836 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: goods_received_note
+2025-05-11 10:31:45,844 - document_management.extraction - INFO - Extracting structured data for doc_type: goods_received_note using PyMuPDFExtractor.
+2025-05-11 10:31:45,844 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO92991.pdf using PyMuPDFExtractor.
+2025-05-11 10:31:45,851 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 10:31:45,853 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 10:31:45,855 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 10:31:45,855 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 12, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}

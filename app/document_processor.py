@@ -21,10 +21,11 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 from faker import Faker
+from tqdm import tqdm
 
 # Import ML models and extraction utilities
 from app.ml_models import DocumentClassifier
-from app.document_extraction import get_extractor, Extractor # Import the factory and protocol
+from app.document_extraction import AdvancedDataExtractor, get_extractor, Extractor # Import the factory and protocol
 
 logger = logging.getLogger("document_management.processor")
 
@@ -39,7 +40,7 @@ ARCHIVE_DIR = SIMULATED_DATA_LAKE_DIR / "archived_documents"
 class DocumentProcessor:
     def __init__(self,
                  extractor_type: str = "pytesseract", # "pytesseract" or "advanced_model"
-                 doc_classifier_model_name: str = "microsoft/layoutlmv2-base-uncased"):
+                 doc_classifier_model_name: str = "prajjwal1/bert-tiny"):
         self.fake = Faker()
         
         # Directories
@@ -63,7 +64,8 @@ class DocumentProcessor:
             self.classifier = DocumentClassifier(model_name=doc_classifier_model_name)
         except RuntimeError as e:
             logger.error(f"Failed to initialize DocumentClassifier: {e}. Classification will be skipped/defaulted.")
-            self.classifier = None # Allow graceful degradation if model fails to load
+            raise f' {e} - Document classification will be skipped or defaulted.'
+            # self.classifier = None # Allow graceful degradation if model fails to load
 
         # Configure your extractor. For Docling, you'd pass an API key.
         # For demo, you can switch this via environment variable or config later.
@@ -296,7 +298,7 @@ class DocumentProcessor:
             logger.info("No PDF files found in input directory.")
             return {"message": "No PDF files found to process.", "processed_count": 0}
 
-        for pdf_path in pdf_files:
+        for pdf_path in tqdm(pdf_files):
             logger.info(f"Processing file: {pdf_path.name}")
             doc_type = "unknown"
             extracted_data = {}
@@ -305,14 +307,10 @@ class DocumentProcessor:
             if self.classifier and self.classifier.model: # Check if classifier is available
                 try:
                     # Classifier expects a PIL Image. Take the first page for classification.
-                    images = pdf2image.convert_from_path(pdf_path, first_page=1, last_page=1) # Add poppler_path if needed
-                    if images:
-                        doc_type = self.classifier.classify_document_image(images[0])
-                        logger.info(f"File {pdf_path.name} classified as: {doc_type}")
-                        self.stats["classified_docs"][doc_type] = self.stats["classified_docs"].get(doc_type, 0) + 1
-                    else:
-                        logger.warning(f"Could not convert PDF to image for classification: {pdf_path.name}")
-                        self.stats["classified_docs"]["unknown"] +=1
+                    doc_type = self.classifier.classify_document(pdf_path)
+                    logger.info(f"File {pdf_path.name} classified as: {doc_type}")
+                    self.stats["classified_docs"][doc_type] = self.stats["classified_docs"].get(doc_type, 0) + 1
+
                 except Exception as e:
                     logger.error(f"Error during classification of {pdf_path.name}: {e}")
                     self.stats["classified_docs"]["unknown"] +=1 # Count as unknown if classification fails

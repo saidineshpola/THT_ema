@@ -2,7 +2,7 @@
 
 import re
 import json
-import pytesseract
+import fitz  # PyMuPDF
 from PIL import Image
 import pdf2image
 import os
@@ -10,7 +10,7 @@ import logging
 from typing import Dict, Optional, Protocol, Tuple
 
 # Import the advanced extractor from ml_models
-from app.ml_models import AdvancedDataExtractor
+
 
 logger = logging.getLogger("document_management.extraction")
 
@@ -36,6 +36,7 @@ class Extractor(Protocol):
 # --- Basic PyTesseract Implementation ---
 class PyTesseractExtractor:
     def __init__(self):
+        import pytesseract
         logger.info("PyTesseractExtractor initialized.")
 
     def extract_text_from_image(self, image: Image.Image) -> str:
@@ -95,7 +96,7 @@ class PyTesseractExtractor:
         try:
             # Check if poppler is available for pdf2image
             try:
-                images = pdf2image.convert_from_path(pdf_path) # Add poppler_path if not in PATH
+                images = pdf2image.convert_from_path(pdf_path, poppler_path = r'C:\Users\user\Desktop\projects\THT_ema\.venv\Release-24.08.0-0\poppler-24.08.0\Library\bin') # Add poppler_path if not in PATH
             except pdf2image.exceptions.PDFInfoNotInstalledError:
                 logger.error("Poppler not found. PDF to image conversion failed. Ensure Poppler is in your PATH.")
                 return None, {"error": "Poppler not found for PDF conversion."}
@@ -116,6 +117,17 @@ class PyTesseractExtractor:
         except Exception as e:
             logger.error(f"Error extracting data from PDF {pdf_path} with PyTesseractExtractor: {str(e)}")
             return full_text, {"error": str(e)}
+
+# ADvanced Tobe added
+class AdvancedDataExtractor:
+    def __init__(self, api_key: Optional[str] = None):
+        # Placeholder for advanced model initialization
+        self.api_key = api_key
+        logger.info("AdvancedDataExtractor initialized with API key.")
+
+    def extract_fields(self, pdf_path: str, doc_type: str) -> Dict:
+        # Placeholder for advanced model extraction logic
+        raise NotImplementedError("Advanced model extraction not implemented yet.")
 
 class PyMuPDFExtractor:
     def __init__(self):
