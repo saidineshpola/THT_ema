@@ -1,113 +1,55 @@
-from fastapi import FastAPI, File, UploadFile
-import os
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler
-import pandas as pd
+# app/data_ingestion.py
+import logging
+from fastapi import APIRouter, UploadFile, File, HTTPException
+from typing import List
+from pathlib import Path
+import shutil
+
+# Assuming DocumentProcessor is accessible or passed somehow
+# For this example, we might not directly use it here but in main.py
+
+logger = logging.getLogger("document_management.ingestion")
+
+# Directory where uploaded files for the demo will be temporarily stored
+# This should match the input_docs_dir used by DocumentProcessor
+UPLOAD_DIR = Path("simulated_data_lake/input_documents") 
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True) # Ensure it exists
+
+router = APIRouter()
+
+@router.post("/upload-documents/")
+async def upload_documents_for_processing(files: List[UploadFile] = File(...)):
+    """
+    Endpoint to upload multiple documents to the simulated data lake's input directory.
+    """
+    uploaded_filenames = []
+    for file in files:
+        try:
+            # Sanitize filename (basic)
+            safe_filename = Path(file.filename).name 
+            destination_path = UPLOAD_DIR / safe_filename
+            with open(destination_path, "wb") as buffer:
+                shutil.copyfileobj(file.file, buffer)
+            uploaded_filenames.append(file.filename)
+            logger.info(f"File '{file.filename}' uploaded to '{destination_path}'")
+        except Exception as e:
+            logger.error(f"Could not upload file '{file.filename}': {e}")
+            raise HTTPException(status_code=500, detail=f"Could not upload file: {file.filename}. Error: {e}")
+        finally:
+            file.file.close() # Ensure file is closed
+            
+    return {
+        "message": f"Successfully uploaded {len(uploaded_filenames)} files.",
+        "filenames": uploaded_filenames,
+        "upload_directory": str(UPLOAD_DIR)
+    }
 
 def enhance_data_ingestion():
-    """Setup enhanced data ingestion framework"""
-    try:
-        # Create directories if they don't exist
-        os.makedirs("data_lake_input", exist_ok=True)
-        
-        # Setup document watching system using watchdog
-        class DocumentHandler(PatternMatchingEventHandler):
-            def __init__(self):
-                super().__init__(patterns=["*.pdf", "*.csv", "*.xlsx"], 
-                                ignore_directories=True)
-                self.document_processor = None  # Will be set externally
-                
-            def on_created(self, event):
-                """Process file when detected in watch directory"""
-                if not self.document_processor:
-                    print("Warning: DocumentProcessor not set in handler")
-                    return
-                    
-                file_path = event.src_path
-                file_type = os.path.splitext(file_path)[1].lower()
-                
-                print(f"New file detected: {file_path}")
-                
-                # Read file based on type
-                try:
-                    if file_type == '.pdf':
-                        # For PDF files, defer to document extraction
-                        from app.document_extraction import extract_data_from_pdf
-                        doc_type, extracted_data = extract_data_from_pdf(file_path)
-                        
-                        # Process based on document type
-                        if doc_type and extracted_data:
-                            # Save to appropriate data store and generate PDF
-                            if doc_type == "purchase_order":
-                                df = pd.DataFrame([extracted_data])
-                                df.to_csv("data/purchase_orders_extracted.csv", mode='a', header=False, index=False)
-                                self.document_processor.generate_pdf_po(extracted_data, f"purchase_orders_{extracted_data['po_number']}.pdf")
-                            elif doc_type == "invoice":
-                                df = pd.DataFrame([extracted_data])
-                                df.to_csv("data/invoices_extracted.csv", mode='a', header=False, index=False)
-                                self.document_processor.generate_pdf_invoice(extracted_data, f"invoices_{extracted_data['invoice_number']}.pdf")
-                            elif doc_type == "goods_received":
-                                df = pd.DataFrame([extracted_data])
-                                df.to_csv("data/grns_extracted.csv", mode='a', header=False, index=False)
-                                self.document_processor.generate_pdf_grn(extracted_data, f"grns_{extracted_data['grn_number']}.pdf")
-                    
-                    elif file_type == '.csv':
-                        df = pd.read_csv(file_path)
-                        print(f"CSV read with {len(df)} rows")
-                        # Determine file type from content
-                        if 'po_number' in df.columns:
-                            df.to_csv("data/purchase_orders_extracted.csv", mode='a', header=False, index=False)
-                        elif 'invoice_number' in df.columns:
-                            df.to_csv("data/invoices_extracted.csv", mode='a', header=False, index=False)
-                        elif 'grn_number' in df.columns:
-                            df.to_csv("data/grns_extracted.csv", mode='a', header=False, index=False)
-                        
-                    elif file_type == '.xlsx':
-                        df = pd.read_excel(file_path)
-                        print(f"Excel read with {len(df)} rows")
-                        # Determine file type from content
-                        if 'po_number' in df.columns:
-                            df.to_csv("data/purchase_orders_extracted.csv", mode='a', header=False, index=False)
-                        elif 'invoice_number' in df.columns:
-                            df.to_csv("data/invoices_extracted.csv", mode='a', header=False, index=False)
-                        elif 'grn_number' in df.columns:
-                            df.to_csv("data/grns_extracted.csv", mode='a', header=False, index=False)
-                            
-                    # Update reconciliation after processing
-                    from app.reconciliation import run_reconciliation
-                    run_reconciliation()
-                    
-                except Exception as e:
-                    print(f"Error processing file {file_path}: {str(e)}")
-        
-        # Create an instance of the handler
-        document_handler = DocumentHandler()
-        
-        # Setup document directory observer
-        observer = Observer()
-        observer.schedule(document_handler, path="data_lake_input/", recursive=False)
-        
-        # FastAPI for document uploads
-        upload_app = FastAPI(title="Document Upload API")
-        
-        @upload_app.post("/upload/")
-        async def upload_document(file: UploadFile = File(...)):
-            """API endpoint for document uploads"""
-            try:
-                # Save uploaded file
-                file_path = f"data_lake_input/{file.filename}"
-                with open(file_path, "wb") as f:
-                    f.write(await file.read())
-                return {"filename": file.filename, "status": "uploaded and processing"}
-            except Exception as e:
-                return {"error": str(e)}
-        
-        return {
-            "api": upload_app,
-            "observer": observer,
-            "document_handler": document_handler
-        }
-    
-    except Exception as e:
-        print(f"Error setting up data ingestion: {str(e)}")
-        return None
+    """
+    Conceptual function. For the demo, we primarily use the upload endpoint.
+    A real system might have Kafka consumers or directory watchers here.
+    """
+    logger.info("Data ingestion framework placeholder initialized.")
+    # In a more complex setup, this could return objects for watching directories,
+    # handling Kafka messages, etc. For now, we'll use the API router.
+    return {"api_router": router}
