@@ -1355,3 +1355,12 @@
 2025-05-11 13:48:35,688 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\goods_received_note
 2025-05-11 13:48:35,689 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
 2025-05-11 13:48:35,690 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 3, 'invoice': 4, 'goods_received_note': 5, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 13:53:43,544 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:53:44,269 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:53:44,270 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:53:44,270 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:53:44,270 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:53:44,270 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 14:05:59,225 - document_management.processor - INFO - Starting reconciliation of processed documents.
+2025-05-11 14:05:59,266 - document_management.processor - INFO - Reconciling: 8 POs, 8 Invoices, 8 GRNs
+2025-05-11 14:05:59,310 - document_management.processor - INFO - Reconciliation completed. Detailed results: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_results_detail.csv, Summary: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_summary_report.json
