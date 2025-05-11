@@ -175,14 +175,14 @@ async def get_system_stats_endpoint():
     """
     if not doc_processor:
         raise HTTPException(status_code=503, detail="DocumentProcessor not available.")
-    return doc_processor.get_processing_stats()
+    stats = doc_processor.get_processing_stats()
+    from app.dashboard import create_processing_dashboard
+    create_processing_dashboard(stats)
+    return stats
 
 
 if __name__ == "__main__":
     # Make sure Poppler (for pdf2image) and Tesseract OCR are installed and in PATH
-    # For Tesseract, you might need:
-    # os.environ["TESSDATA_PREFIX"] = "/path/to/your/tessdata"
-    # pytesseract.pytesseract.tesseract_cmd = r'/path/to/your/tesseract'
     
     logger.info("Starting Document Management System API...")
     uvicorn.run(app, host="0.0.0.0", port=8000)

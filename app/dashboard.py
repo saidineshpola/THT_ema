@@ -1,52 +1,104 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
 import plotly.graph_objects as go
-from pathlib import Path
+from plotly.subplots import make_subplots
+import plotly.express as px
 
-def load_data():
-    """Load reconciled data"""
-    data_dir = Path("data")
-    pos = pd.read_csv(data_dir / "purchase_orders_extracted.csv")
-    invoices = pd.read_csv(data_dir / "invoices_extracted.csv")
-    grns = pd.read_csv(data_dir / "grns_extracted.csv")
-    return pos, invoices, grns
-
-def create_dashboard():
-    st.title("Document Management Analytics Dashboard")
+def create_processing_dashboard(stats: dict) -> None:
+    """Creates an interactive dashboard with multiple plots showing document processing statistics."""
     
-    try:
-        pos, invoices, grns = load_data()
-        
-        # Key Metrics
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Total POs", len(pos))
-        with col2:
-            st.metric("Total Invoices", len(invoices))
-        with col3:
-            st.metric("Total GRNs", len(grns))
-            
-        # Time Series Analysis
-        st.subheader("Document Volume Over Time")
-        daily_volumes = pd.concat([
-            pos.groupby('issue_date').size(),
-            invoices.groupby('invoice_date').size(),
-            grns.groupby('received_date').size()
-        ], axis=1)
-        fig = px.line(daily_volumes, title="Daily Document Volumes")
-        st.plotly_chart(fig)
-        
-        # Reconciliation Status
-        st.subheader("Reconciliation Status")
-        matched = len(pos[pos['po_number'].isin(invoices['po_reference'])])
-        unmatched = len(pos) - matched
-        fig = go.Figure(data=[go.Pie(labels=['Matched', 'Unmatched'], 
-                                   values=[matched, unmatched])])
-        st.plotly_chart(fig)
-        
-    except Exception as e:
-        st.error(f"Error loading dashboard: {str(e)}")
+    # Create figure with secondary y-axis
+    fig = make_subplots(
+        rows=2, cols=2,
+        subplot_titles=("Generated PDFs by Type", 
+                       "Document Classification Results",
+                       "Processing Overview",
+                       "Error Analysis"),
+        specs=[[{"type": "pie"}, {"type": "bar"}],
+               [{"type": "bar"}, {"type": "bar"}]]
+    )
 
+    # 1. Pie Chart for Generated PDFs
+    pdf_labels = list(stats["generated_pdfs"].keys())
+    pdf_values = list(stats["generated_pdfs"].values())
+    fig.add_trace(
+        go.Pie(labels=pdf_labels, 
+               values=pdf_values,
+               name="Generated PDFs"),
+        row=1, col=1
+    )
+
+    # 2. Bar Chart for Document Classification
+    fig.add_trace(
+        go.Bar(
+            x=list(stats["classified_docs"].keys()),
+            y=list(stats["classified_docs"].values()),
+            name="Classified Documents",
+            marker_color='rgb(55, 83, 109)'
+        ),
+        row=1, col=2
+    )
+
+    # 3. Processing Overview
+    fig.add_trace(
+        go.Bar(
+            x=['Total Processed', 'Successfully Extracted'],
+            y=[stats["processed_files"], stats["extracted_docs"]],
+            name="Processing Overview",
+            marker_color=['rgb(26, 118, 255)', 'rgb(58, 171, 115)']
+        ),
+        row=2, col=1
+    )
+
+    # 4. Error Analysis
+    fig.add_trace(
+        go.Bar(
+            x=['Extraction Errors', 'Reconciliation Errors'],
+            y=[stats["extraction_errors"], stats["reconciliation_errors"]],
+            name="Errors",
+            marker_color='rgb(246, 78, 139)'
+        ),
+        row=2, col=2
+    )
+
+    # Update layout
+    fig.update_layout(
+        title_text="Document Processing Analytics Dashboard",
+        showlegend=True,
+        height=800,
+        width=1200,
+        template="plotly_white"
+    )
+
+    # Update axes labels
+    fig.update_xaxes(title_text="Document Type", row=1, col=2)
+    fig.update_xaxes(title_text="Process Type", row=2, col=1)
+    fig.update_xaxes(title_text="Error Type", row=2, col=2)
+    
+    fig.update_yaxes(title_text="Count", row=1, col=2)
+    fig.update_yaxes(title_text="Count", row=2, col=1)
+    fig.update_yaxes(title_text="Count", row=2, col=2)
+
+    # Show the plot
+    fig.show()
+    # Save it to a file if needed
+    fig.write_html("document_processing_dashboard.html")
+
+# Example usage:
 if __name__ == "__main__":
-    create_dashboard()
+    sample_stats = {
+        "generated_pdfs": {
+            "po": 5,
+            "invoice": 4,
+            "grn": 3
+        },
+        "processed_files": 12,
+        "classified_docs": {
+            "purchase_order": 5,
+            "invoice": 4,
+            "goods_received_note": 3,
+            "unknown": 0
+        },
+        "extracted_docs": 12,
+        "extraction_errors": 0,
+        "reconciliation_errors": 0
+    }
+    create_processing_dashboard(sample_stats)

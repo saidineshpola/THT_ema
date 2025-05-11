@@ -851,3 +851,507 @@
 2025-05-11 10:31:45,853 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\goods_received_note
 2025-05-11 10:31:45,855 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
 2025-05-11 10:31:45,855 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 12, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 10:48:07,070 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:48:11,985 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:48:11,985 - document_management.extraction - INFO - Initializing PyTesseractExtractor
+2025-05-11 10:48:11,985 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:48:11,985 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:48:11,986 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:48:21,312 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:48:25,178 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:48:25,178 - document_management.extraction - INFO - Initializing PyTesseractExtractor
+2025-05-11 10:48:25,178 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:48:25,178 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:48:25,179 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:48:42,009 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:48:46,086 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:48:46,086 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 10:48:46,086 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:48:46,086 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:48:46,087 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 10:48:55,696 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 10:48:59,507 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 10:48:59,507 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 10:48:59,507 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 10:48:59,507 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 10:48:59,508 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:26:05,037 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:26:08,652 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:26:08,652 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:26:08,653 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:26:08,653 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:26:08,653 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:31:29,585 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:31:34,709 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:31:34,709 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:31:34,719 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:31:34,719 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:31:34,719 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:31:46,265 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:31:49,708 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:31:49,708 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:31:49,708 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:31:49,708 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:31:49,708 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:31:57,342 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:32:00,735 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:32:00,735 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:32:00,735 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:32:00,735 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:32:00,735 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:32:08,112 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:32:12,372 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:32:12,372 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:32:12,372 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:32:12,372 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:32:12,373 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:32:24,392 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:32:28,126 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:32:28,126 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:32:28,126 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:32:28,128 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:32:28,128 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:32:35,633 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:32:39,088 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:32:39,088 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:32:39,090 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:32:39,090 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:32:39,090 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:32:55,965 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:32:59,487 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:32:59,487 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:32:59,487 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:32:59,487 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:32:59,487 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:33:34,813 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:33:38,449 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:33:38,449 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:33:38,450 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:33:38,451 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:33:38,452 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:33:55,637 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:33:59,079 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:33:59,079 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:33:59,079 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:33:59,079 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:33:59,079 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:34:30,230 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:34:34,044 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:34:34,044 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:34:34,044 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:34:34,044 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:34:34,045 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:34:42,232 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:34:45,852 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:34:45,853 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:34:45,853 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:34:45,853 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:34:45,853 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:34:58,119 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:35:01,556 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:35:01,556 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:35:01,556 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:35:01,556 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:35:01,556 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:35:15,174 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:35:19,197 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:35:19,198 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:35:19,198 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:35:19,198 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:35:19,198 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:35:27,195 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:35:30,713 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:35:30,713 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:35:30,713 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:35:30,713 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:35:30,713 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:35:38,328 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:35:41,925 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:35:41,925 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:35:41,925 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:35:41,925 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:35:41,925 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:36:08,736 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:36:12,597 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:36:12,597 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:36:12,597 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:36:12,597 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:36:12,598 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:41:32,936 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 12:41:36,527 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 12:41:36,527 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 12:41:36,527 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 12:41:36,527 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 12:41:36,527 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 12:47:00,836 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 12:47:00,836 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 12:47:00,840 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 12:47:00,853 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: invoice
+2025-05-11 12:47:00,864 - document_management.processor - INFO - Successfully extracted data from grn_GRN4725.pdf as invoice
+2025-05-11 12:47:00,864 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:00,867 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:00,867 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 12:47:00,893 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: invoice
+2025-05-11 12:47:00,898 - document_management.processor - INFO - Successfully extracted data from grn_GRN7809.pdf as invoice
+2025-05-11 12:47:00,900 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:00,901 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:00,902 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 12:47:00,943 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: invoice
+2025-05-11 12:47:00,945 - document_management.processor - INFO - Successfully extracted data from grn_GRN8816.pdf as invoice
+2025-05-11 12:47:00,945 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:00,953 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:00,954 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 12:47:00,978 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: invoice
+2025-05-11 12:47:00,987 - document_management.processor - INFO - Successfully extracted data from invoice_INV527356.pdf as invoice
+2025-05-11 12:47:00,987 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:00,991 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:00,991 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 12:47:01,012 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: invoice
+2025-05-11 12:47:01,017 - document_management.processor - INFO - Successfully extracted data from invoice_INV909500.pdf as invoice
+2025-05-11 12:47:01,020 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,023 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,024 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 12:47:01,058 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: invoice
+2025-05-11 12:47:01,066 - document_management.processor - INFO - Successfully extracted data from invoice_INV973631.pdf as invoice
+2025-05-11 12:47:01,067 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,070 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,071 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 12:47:01,092 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: invoice
+2025-05-11 12:47:01,098 - document_management.processor - INFO - Successfully extracted data from invoice_INV98246.pdf as invoice
+2025-05-11 12:47:01,099 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,102 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,103 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 12:47:01,124 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: invoice
+2025-05-11 12:47:01,131 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO23502.pdf as invoice
+2025-05-11 12:47:01,132 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,133 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,134 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 12:47:01,153 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: invoice
+2025-05-11 12:47:01,163 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO64951.pdf as invoice
+2025-05-11 12:47:01,165 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,166 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,167 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 12:47:01,189 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: invoice
+2025-05-11 12:47:01,195 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO88998.pdf as invoice
+2025-05-11 12:47:01,196 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,198 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,198 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 12:47:01,234 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: invoice
+2025-05-11 12:47:01,236 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO89100.pdf as invoice
+2025-05-11 12:47:01,236 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,243 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,243 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 12:47:01,262 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: invoice
+2025-05-11 12:47:01,273 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO92991.pdf as invoice
+2025-05-11 12:47:01,274 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 12:47:01,275 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 12:47:01,276 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 12:47:01,277 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 12, 'goods_received_note': 0, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 13:21:04,652 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:21:05,372 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:21:05,372 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:21:05,372 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:21:05,372 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:21:05,372 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:22:41,545 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:22:42,736 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:22:42,736 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:22:42,737 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:22:42,737 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:22:42,738 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:25:11,830 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 13:25:11,830 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 13:25:11,830 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 13:25:11,830 - document_management.processor - ERROR - Error during classification of grn_GRN4725.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,830 - document_management.processor - WARNING - Skipping extraction for grn_GRN4725.pdf - classified as unknown
+2025-05-11 13:25:11,838 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,839 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 13:25:11,839 - document_management.processor - ERROR - Error during classification of grn_GRN7809.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,839 - document_management.processor - WARNING - Skipping extraction for grn_GRN7809.pdf - classified as unknown
+2025-05-11 13:25:11,842 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,842 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 13:25:11,842 - document_management.processor - ERROR - Error during classification of grn_GRN8816.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,842 - document_management.processor - WARNING - Skipping extraction for grn_GRN8816.pdf - classified as unknown
+2025-05-11 13:25:11,847 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,847 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 13:25:11,847 - document_management.processor - ERROR - Error during classification of invoice_INV527356.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,847 - document_management.processor - WARNING - Skipping extraction for invoice_INV527356.pdf - classified as unknown
+2025-05-11 13:25:11,864 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,865 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 13:25:11,865 - document_management.processor - ERROR - Error during classification of invoice_INV909500.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,865 - document_management.processor - WARNING - Skipping extraction for invoice_INV909500.pdf - classified as unknown
+2025-05-11 13:25:11,868 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,869 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 13:25:11,869 - document_management.processor - ERROR - Error during classification of invoice_INV973631.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,869 - document_management.processor - WARNING - Skipping extraction for invoice_INV973631.pdf - classified as unknown
+2025-05-11 13:25:11,885 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,885 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 13:25:11,885 - document_management.processor - ERROR - Error during classification of invoice_INV98246.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,886 - document_management.processor - WARNING - Skipping extraction for invoice_INV98246.pdf - classified as unknown
+2025-05-11 13:25:11,889 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,889 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 13:25:11,889 - document_management.processor - ERROR - Error during classification of purchase_order_PO23502.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,890 - document_management.processor - WARNING - Skipping extraction for purchase_order_PO23502.pdf - classified as unknown
+2025-05-11 13:25:11,894 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,894 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 13:25:11,894 - document_management.processor - ERROR - Error during classification of purchase_order_PO64951.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,894 - document_management.processor - WARNING - Skipping extraction for purchase_order_PO64951.pdf - classified as unknown
+2025-05-11 13:25:11,897 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,898 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 13:25:11,898 - document_management.processor - ERROR - Error during classification of purchase_order_PO88998.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,898 - document_management.processor - WARNING - Skipping extraction for purchase_order_PO88998.pdf - classified as unknown
+2025-05-11 13:25:11,915 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,916 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 13:25:11,916 - document_management.processor - ERROR - Error during classification of purchase_order_PO89100.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,916 - document_management.processor - WARNING - Skipping extraction for purchase_order_PO89100.pdf - classified as unknown
+2025-05-11 13:25:11,917 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,917 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 13:25:11,917 - document_management.processor - ERROR - Error during classification of purchase_order_PO92991.pdf: 'DocumentClassifier' object has no attribute 'model'
+2025-05-11 13:25:11,921 - document_management.processor - WARNING - Skipping extraction for purchase_order_PO92991.pdf - classified as unknown
+2025-05-11 13:25:11,925 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\unknown
+2025-05-11 13:25:11,926 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 13:25:11,926 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 0, 'invoice': 0, 'goods_received_note': 0, 'unknown': 12}, 'extracted_docs': 0, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 13:26:11,514 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:26:12,264 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:26:12,264 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:26:12,264 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:26:12,264 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:26:12,264 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:29:05,918 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 13:29:05,918 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 13:29:05,918 - document_management.processor - INFO - No PDF files found in input directory.
+2025-05-11 13:29:05,918 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'No PDF files found to process.', 'processed_count': 0}
+2025-05-11 13:29:21,949 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 13:29:21,949 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 13:29:21,951 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 13:29:21,978 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.40)
+2025-05-11 13:29:21,978 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: goods_received_note
+2025-05-11 13:29:21,984 - document_management.processor - INFO - Successfully extracted data from grn_GRN4725.pdf as goods_received_note
+2025-05-11 13:29:21,984 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:29:21,988 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:29:21,989 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 13:29:22,005 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.40)
+2025-05-11 13:29:22,005 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: goods_received_note
+2025-05-11 13:29:22,010 - document_management.processor - INFO - Successfully extracted data from grn_GRN7809.pdf as goods_received_note
+2025-05-11 13:29:22,012 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:29:22,014 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:29:22,015 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 13:29:22,032 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.40)
+2025-05-11 13:29:22,033 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: goods_received_note
+2025-05-11 13:29:22,036 - document_management.processor - INFO - Successfully extracted data from grn_GRN8816.pdf as goods_received_note
+2025-05-11 13:29:22,036 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:29:22,043 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:29:22,043 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 13:29:22,062 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.37)
+2025-05-11 13:29:22,062 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: invoice
+2025-05-11 13:29:22,067 - document_management.processor - INFO - Successfully extracted data from invoice_INV527356.pdf as invoice
+2025-05-11 13:29:22,075 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:29:22,078 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:29:22,080 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 13:29:22,112 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.37)
+2025-05-11 13:29:22,112 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: invoice
+2025-05-11 13:29:22,117 - document_management.processor - INFO - Successfully extracted data from invoice_INV909500.pdf as invoice
+2025-05-11 13:29:22,117 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:29:22,126 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:29:22,127 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 13:29:22,142 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.37)
+2025-05-11 13:29:22,142 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: invoice
+2025-05-11 13:29:22,154 - document_management.processor - INFO - Successfully extracted data from invoice_INV973631.pdf as invoice
+2025-05-11 13:29:22,155 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:29:22,158 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:29:22,159 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 13:29:22,178 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.37)
+2025-05-11 13:29:22,178 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: invoice
+2025-05-11 13:29:22,184 - document_management.processor - INFO - Successfully extracted data from invoice_INV98246.pdf as invoice
+2025-05-11 13:29:22,184 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:29:22,190 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:29:22,191 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 13:29:22,212 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.37)
+2025-05-11 13:29:22,216 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: purchase_order
+2025-05-11 13:29:22,218 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO23502.pdf as purchase_order
+2025-05-11 13:29:22,224 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:29:22,229 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:29:22,230 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 13:29:22,256 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.36)
+2025-05-11 13:29:22,258 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: purchase_order
+2025-05-11 13:29:22,265 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO64951.pdf as purchase_order
+2025-05-11 13:29:22,267 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:29:22,270 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:29:22,271 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 13:29:22,295 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.36)
+2025-05-11 13:29:22,296 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: purchase_order
+2025-05-11 13:29:22,302 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO88998.pdf as purchase_order
+2025-05-11 13:29:22,304 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:29:22,306 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:29:22,307 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 13:29:22,329 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.37)
+2025-05-11 13:29:22,333 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: purchase_order
+2025-05-11 13:29:22,337 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO89100.pdf as purchase_order
+2025-05-11 13:29:22,341 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:29:22,345 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:29:22,346 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 13:29:22,370 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.36)
+2025-05-11 13:29:22,370 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: purchase_order
+2025-05-11 13:29:22,378 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO92991.pdf as purchase_order
+2025-05-11 13:29:22,380 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:29:22,383 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:29:22,384 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 13:29:22,385 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 5, 'invoice': 4, 'goods_received_note': 3, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-11 13:33:48,750 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:33:49,513 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:33:49,513 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:33:49,513 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:33:49,513 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:33:49,514 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:34:15,863 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:34:16,587 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:34:16,587 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:34:16,587 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:34:16,588 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:34:16,588 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:34:27,419 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:34:28,138 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:34:28,138 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:34:28,138 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:34:28,138 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:34:28,138 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:40:40,366 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:40:41,069 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:40:41,069 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:40:41,069 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:40:41,069 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:40:41,069 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:41:01,859 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:41:02,562 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:41:02,562 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:41:02,562 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:41:02,562 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:41:02,562 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:41:13,451 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:41:14,274 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:41:14,274 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:41:14,274 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:41:14,274 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:41:14,274 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:41:25,311 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:41:26,041 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:41:26,041 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:41:26,041 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:41:26,042 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:41:26,042 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:41:58,052 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:41:58,760 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:41:58,760 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:41:58,760 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:41:58,760 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:41:58,760 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:45:16,094 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:45:16,847 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:45:16,847 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:45:16,847 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:45:16,852 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:45:16,853 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:45:42,611 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:45:43,396 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:45:43,396 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:45:43,396 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:45:43,396 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:45:43,396 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:47:11,564 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:47:12,320 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:47:12,320 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:47:12,320 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:47:12,320 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:47:12,320 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:47:38,058 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:47:38,804 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:47:38,804 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:47:38,804 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:47:38,805 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:47:38,806 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:48:01,432 - document_management.processor - INFO - Required directories ensured/created.
+2025-05-11 13:48:02,133 - document_management.ml_models - INFO - DocumentClassifier initialized with model: prajjwal1/bert-tiny
+2025-05-11 13:48:02,134 - document_management.extraction - INFO - Initializing PyMuPDFExtractor
+2025-05-11 13:48:02,134 - document_management.processor - INFO - DocumentProcessor initialized. Input: simulated_data_lake\input_documents, Output: simulated_data_lake\processed_data, Extractor: pymupdf
+2025-05-11 13:48:02,134 - document_management.api - INFO - DocumentProcessor initialized with extractor: pymupdf
+2025-05-11 13:48:02,135 - document_management.ingestion - INFO - Data ingestion framework placeholder initialized.
+2025-05-11 13:48:02,556 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 13:48:02,556 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 13:48:02,556 - document_management.processor - INFO - No PDF files found in input directory.
+2025-05-11 13:48:02,556 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'No PDF files found to process.', 'processed_count': 0}
+2025-05-11 13:48:35,111 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-11 13:48:35,111 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-11 13:48:35,113 - document_management.processor - INFO - Processing file: grn_GRN4725.pdf
+2025-05-11 13:48:35,149 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.38)
+2025-05-11 13:48:35,152 - document_management.processor - INFO - File grn_GRN4725.pdf classified as: goods_received_note
+2025-05-11 13:48:35,156 - document_management.processor - INFO - Successfully extracted data from grn_GRN4725.pdf as goods_received_note
+2025-05-11 13:48:35,156 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:48:35,161 - document_management.processor - INFO - Archived grn_GRN4725.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:48:35,161 - document_management.processor - INFO - Processing file: grn_GRN7809.pdf
+2025-05-11 13:48:35,195 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.38)
+2025-05-11 13:48:35,195 - document_management.processor - INFO - File grn_GRN7809.pdf classified as: goods_received_note
+2025-05-11 13:48:35,200 - document_management.processor - INFO - Successfully extracted data from grn_GRN7809.pdf as goods_received_note
+2025-05-11 13:48:35,201 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:48:35,205 - document_management.processor - INFO - Archived grn_GRN7809.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:48:35,205 - document_management.processor - INFO - Processing file: grn_GRN8816.pdf
+2025-05-11 13:48:35,240 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.38)
+2025-05-11 13:48:35,240 - document_management.processor - INFO - File grn_GRN8816.pdf classified as: goods_received_note
+2025-05-11 13:48:35,246 - document_management.processor - INFO - Successfully extracted data from grn_GRN8816.pdf as goods_received_note
+2025-05-11 13:48:35,247 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:48:35,250 - document_management.processor - INFO - Archived grn_GRN8816.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:48:35,251 - document_management.processor - INFO - Processing file: invoice_INV527356.pdf
+2025-05-11 13:48:35,286 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-11 13:48:35,286 - document_management.processor - INFO - File invoice_INV527356.pdf classified as: invoice
+2025-05-11 13:48:35,294 - document_management.processor - INFO - Successfully extracted data from invoice_INV527356.pdf as invoice
+2025-05-11 13:48:35,295 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:48:35,298 - document_management.processor - INFO - Archived invoice_INV527356.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:48:35,299 - document_management.processor - INFO - Processing file: invoice_INV909500.pdf
+2025-05-11 13:48:35,318 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.36)
+2025-05-11 13:48:35,318 - document_management.processor - INFO - File invoice_INV909500.pdf classified as: invoice
+2025-05-11 13:48:35,322 - document_management.processor - INFO - Successfully extracted data from invoice_INV909500.pdf as invoice
+2025-05-11 13:48:35,326 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:48:35,329 - document_management.processor - INFO - Archived invoice_INV909500.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:48:35,330 - document_management.processor - INFO - Processing file: invoice_INV973631.pdf
+2025-05-11 13:48:35,359 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.36)
+2025-05-11 13:48:35,359 - document_management.processor - INFO - File invoice_INV973631.pdf classified as: invoice
+2025-05-11 13:48:35,368 - document_management.processor - INFO - Successfully extracted data from invoice_INV973631.pdf as invoice
+2025-05-11 13:48:35,369 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:48:35,373 - document_management.processor - INFO - Archived invoice_INV973631.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:48:35,373 - document_management.processor - INFO - Processing file: invoice_INV98246.pdf
+2025-05-11 13:48:35,409 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.36)
+2025-05-11 13:48:35,409 - document_management.processor - INFO - File invoice_INV98246.pdf classified as: invoice
+2025-05-11 13:48:35,417 - document_management.processor - INFO - Successfully extracted data from invoice_INV98246.pdf as invoice
+2025-05-11 13:48:35,418 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-11 13:48:35,422 - document_management.processor - INFO - Archived invoice_INV98246.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-11 13:48:35,422 - document_management.processor - INFO - Processing file: purchase_order_PO23502.pdf
+2025-05-11 13:48:35,461 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-11 13:48:35,462 - document_management.processor - INFO - File purchase_order_PO23502.pdf classified as: purchase_order
+2025-05-11 13:48:35,471 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO23502.pdf as purchase_order
+2025-05-11 13:48:35,473 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:48:35,477 - document_management.processor - INFO - Archived purchase_order_PO23502.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:48:35,477 - document_management.processor - INFO - Processing file: purchase_order_PO64951.pdf
+2025-05-11 13:48:35,518 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.34)
+2025-05-11 13:48:35,519 - document_management.processor - INFO - File purchase_order_PO64951.pdf classified as: goods_received_note
+2025-05-11 13:48:35,525 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO64951.pdf as goods_received_note
+2025-05-11 13:48:35,527 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:48:35,530 - document_management.processor - INFO - Archived purchase_order_PO64951.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:48:35,531 - document_management.processor - INFO - Processing file: purchase_order_PO88998.pdf
+2025-05-11 13:48:35,565 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-11 13:48:35,571 - document_management.processor - INFO - File purchase_order_PO88998.pdf classified as: purchase_order
+2025-05-11 13:48:35,579 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO88998.pdf as purchase_order
+2025-05-11 13:48:35,581 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:48:35,584 - document_management.processor - INFO - Archived purchase_order_PO88998.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:48:35,585 - document_management.processor - INFO - Processing file: purchase_order_PO89100.pdf
+2025-05-11 13:48:35,615 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-11 13:48:35,615 - document_management.processor - INFO - File purchase_order_PO89100.pdf classified as: purchase_order
+2025-05-11 13:48:35,627 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO89100.pdf as purchase_order
+2025-05-11 13:48:35,628 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-11 13:48:35,632 - document_management.processor - INFO - Archived purchase_order_PO89100.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-11 13:48:35,632 - document_management.processor - INFO - Processing file: purchase_order_PO92991.pdf
+2025-05-11 13:48:35,672 - document_management.ml_models - INFO - Classification result: goods_received_note (confidence: 0.34)
+2025-05-11 13:48:35,672 - document_management.processor - INFO - File purchase_order_PO92991.pdf classified as: goods_received_note
+2025-05-11 13:48:35,682 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO92991.pdf as goods_received_note
+2025-05-11 13:48:35,683 - document_management.processor - INFO - Saved extracted data for goods_received_note to simulated_data_lake\processed_data\processed_grns.csv
+2025-05-11 13:48:35,688 - document_management.processor - INFO - Archived purchase_order_PO92991.pdf to simulated_data_lake\archived_documents\goods_received_note
+2025-05-11 13:48:35,689 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-11 13:48:35,690 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 0, 'invoice': 0, 'grn': 0}, 'processed_files': 12, 'classified_docs': {'purchase_order': 3, 'invoice': 4, 'goods_received_note': 5, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}

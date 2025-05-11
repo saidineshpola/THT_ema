@@ -286,7 +286,7 @@ class DocumentProcessor:
         """
         Processes all PDF documents found in the `input_docs_dir`.
         1. Classifies the document.
-        2. Extracts data using the configured extractor.
+        2. Extracts data using the configured extractor based on classification.
         3. Saves extracted data to CSVs in `processed_data_dir`.
         4. Archives processed PDFs.
         """
@@ -297,62 +297,81 @@ class DocumentProcessor:
         if not pdf_files:
             logger.info("No PDF files found in input directory.")
             return {"message": "No PDF files found to process.", "processed_count": 0}
-
+    
         for pdf_path in tqdm(pdf_files):
             logger.info(f"Processing file: {pdf_path.name}")
             doc_type = "unknown"
             extracted_data = {}
-
+    
             # 1. Classify Document
-            if self.classifier and self.classifier.model: # Check if classifier is available
-                try:
-                    # Classifier expects a PIL Image. Take the first page for classification.
+            try:
+                if self.classifier:
                     doc_type = self.classifier.classify_document(pdf_path)
                     logger.info(f"File {pdf_path.name} classified as: {doc_type}")
                     self.stats["classified_docs"][doc_type] = self.stats["classified_docs"].get(doc_type, 0) + 1
-
-                except Exception as e:
-                    logger.error(f"Error during classification of {pdf_path.name}: {e}")
-                    self.stats["classified_docs"]["unknown"] +=1 # Count as unknown if classification fails
-            else:
-                logger.warning(f"Document classifier not available. Skipping ML classification for {pdf_path.name}.")
-                # Fallback: try to guess from filename or use a default "unknown"
-                if "invoice" in pdf_path.name.lower(): doc_type = "invoice"
-                elif "po" in pdf_path.name.lower() or "purchase_order" in pdf_path.name.lower(): doc_type = "purchase_order"
-                elif "grn" in pdf_path.name.lower() or "goods_received" in pdf_path.name.lower(): doc_type = "goods_received_note"
-                else: doc_type = "unknown"
-                logger.info(f"File {pdf_path.name} heuristically typed as: {doc_type}")
-                self.stats["classified_docs"][doc_type] = self.stats["classified_docs"].get(doc_type, 0) + 1
-
-
-            # 2. Extract Data
+                else:
+                    # Fallback classification based on filename
+                    if "invoice" in pdf_path.name.lower():
+                        doc_type = "invoice"
+                    elif "po" in pdf_path.name.lower() or "purchase_order" in pdf_path.name.lower():
+                        doc_type = "purchase_order"
+                    elif "grn" in pdf_path.name.lower() or "goods_received" in pdf_path.name.lower():
+                        doc_type = "goods_received_note"
+                    else:
+                        doc_type = "unknown"
+                    logger.info(f"File {pdf_path.name} classified by filename as: {doc_type}")
+                    self.stats["classified_docs"][doc_type] = self.stats["classified_docs"].get(doc_type, 0) + 1
+            except Exception as e:
+                logger.error(f"Error during classification of {pdf_path.name}: {e}")
+                doc_type = "unknown"
+                self.stats["classified_docs"]["unknown"] += 1
+            # TODO: if invoice or PO or GRN, extract them 
             if doc_type != "unknown":
+                success, extracted_data = self.extractor.extract_from_pdf_path(pdf_path=str(pdf_path), doc_type=doc_type)
+                if success and extracted_data and "error" not in extracted_data:
+                    logger.info(f"Successfully extracted data from {pdf_path.name} as {doc_type}")
+                    # Add metadata to extracted data
+                    extracted_data["original_filename"] = pdf_path.name
+                    extracted_data["extraction_method"] = self.extractor.__class__.__name__
+
+                    self.stats["extracted_docs"] += 1
+                    # Save to appropriate CSV based on document type
+                    self._save_extracted_data_to_csv(extracted_data, doc_type)
+                else:
+                    logger.warning(f"Extraction failed for {pdf_path.name}: {extracted_data.get('error', 'Unknown error')}")
+                    self.stats["extraction_errors"] += 1
+                    extracted_data = {"error": str(e)}
+
+    
+            # 2. Extract Data based on classification
+            elif doc_type != "unknown":
                 try:
-                    _, extracted_data = self.extractor.extract_from_pdf_path(str(pdf_path), doc_type)
-                    if "error" not in extracted_data and extracted_data: # Check if data is not an error dict and not empty
-                        logger.info(f"Successfully extracted data from {pdf_path.name} using {self.extractor.__class__.__name__}.")
+                    # Call the appropriate extraction method based on document type
+                    success, extracted_data = self.extractor.extract_from_pdf_path(
+                        pdf_path=str(pdf_path),
+                        doc_type=doc_type
+                    )
+                    
+                    if success and extracted_data and "error" not in extracted_data:
+                        logger.info(f"Successfully extracted data from {pdf_path.name} as {doc_type}")
+                        # Add metadata to extracted data
                         extracted_data["original_filename"] = pdf_path.name
-                        # Add extraction method to data for clarity if not already present
-                        if isinstance(getattr(self.extractor, 'model', None), AdvancedDataExtractor): # crude check for advanced
-                             extracted_data["extraction_method"] = "AdvancedModelExtractor"
-                        else:
-                             extracted_data["extraction_method"] = "PyTesseractExtractor"
+                        extracted_data["extraction_method"] = self.extractor.__class__.__name__
+                        
+                        # Save to appropriate CSV based on document type
+                        self._save_extracted_data_to_csv(extracted_data, doc_type)
                         self.stats["extracted_docs"] += 1
                     else:
-                        logger.warning(f"Extraction failed or returned empty for {pdf_path.name}: {extracted_data.get('error', 'Empty data')}")
+                        logger.warning(f"Extraction failed for {pdf_path.name}: {extracted_data.get('error', 'Unknown error')}")
                         self.stats["extraction_errors"] += 1
                 except Exception as e:
                     logger.error(f"Error during data extraction from {pdf_path.name}: {e}")
                     self.stats["extraction_errors"] += 1
-                    extracted_data = {"error": str(e), "original_filename": pdf_path.name}
+                    extracted_data = {"error": str(e)}
             else:
-                logger.warning(f"Skipping data extraction for {pdf_path.name} as it was classified as 'unknown'.")
-
-            # 3. Save Extracted Data (if successful and not 'unknown')
-            if doc_type != "unknown" and "error" not in extracted_data and extracted_data:
-                self._save_extracted_data_to_csv(extracted_data, doc_type)
-
-            # 4. Archive Processed PDF
+                logger.warning(f"Skipping extraction for {pdf_path.name} - classified as unknown")
+    
+            # 3. Archive Processed PDF
             try:
                 archive_subfolder = self.archive_dir / doc_type
                 archive_subfolder.mkdir(parents=True, exist_ok=True)
@@ -369,7 +388,7 @@ class DocumentProcessor:
             "message": f"Processed {processed_files_count} files from the data lake.",
             "summary_stats": self.get_processing_stats()
         }
-
+    
     def reconcile_processed_documents(self) -> Dict:
         """Reconcile POs, Invoices and GRNs from the processed CSV files."""
         logger.info("Starting reconciliation of processed documents.")
@@ -528,6 +547,8 @@ class DocumentProcessor:
             return {"error": str(e), "analysis": {}}
 
     def get_processing_stats(self) -> Dict:
+        """Returns the current processing statistics."""
+        # TODO: what if stats are loaded and how to load them?
         return self.stats
 
     def clear_simulated_data_lake_processed_outputs(self):
