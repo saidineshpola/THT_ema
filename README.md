@@ -54,7 +54,12 @@ doc_management_system/
    - Discrepancy identification
    - Reconciliation report generation
 
-4. **API Endpoints**
+4 **Actional Insights**
+   - Spend analysis and trend reporting
+   - Vendor performance metrics
+   - Classification and Error reports
+
+5. **API Endpoints**
    - `/ops/generate-sample-pdfs` : Generate Sample PDFS
    - `/ops/clear-processed-data` : Generate Sample PDFS
    - `/documents/process-data-lake`: Process documents in batch

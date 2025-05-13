@@ -1458,3 +1458,173 @@
 2025-05-13 14:07:57,779 - document_management.processor - INFO - Starting reconciliation of processed documents.
 2025-05-13 14:07:57,818 - document_management.processor - INFO - Reconciling: 15 POs, 13 Invoices, 8 GRNs
 2025-05-13 14:07:57,869 - document_management.processor - INFO - Reconciliation completed. Detailed results: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_results_detail.csv, Summary: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_summary_report.json
+2025-05-13 14:33:28,718 - document_management.processor - INFO - Generating synthetic data: 5 POs, 4 Invoices, 3 GRNs.
+2025-05-13 14:33:28,719 - document_management.processor - INFO - Cleared previous PDFs from simulated_data_lake\generated_sample_pdfs
+2025-05-13 14:33:28,777 - document_management.processor - INFO - Synthetic PDF generation complete. Check simulated_data_lake\generated_sample_pdfs
+2025-05-13 14:34:32,062 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-13 14:34:32,062 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-13 14:34:32,063 - document_management.processor - INFO - No PDF files found in input directory.
+2025-05-13 14:34:32,063 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'No PDF files found to process.', 'processed_count': 0}
+2025-05-13 14:35:00,117 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-13 14:35:00,118 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-13 14:35:00,119 - document_management.processor - INFO - Processing file: grn_GRN44.pdf
+2025-05-13 14:35:00,138 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-13 14:35:00,138 - document_management.processor - INFO - File grn_GRN44.pdf classified as: invoice
+2025-05-13 14:35:00,143 - document_management.processor - INFO - Successfully extracted data from grn_GRN44.pdf as invoice
+2025-05-13 14:35:00,145 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:35:00,146 - document_management.processor - INFO - Archived grn_GRN44.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:35:00,146 - document_management.processor - INFO - Processing file: grn_GRN8857.pdf
+2025-05-13 14:35:00,186 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-13 14:35:00,187 - document_management.processor - INFO - File grn_GRN8857.pdf classified as: invoice
+2025-05-13 14:35:00,193 - document_management.processor - INFO - Successfully extracted data from grn_GRN8857.pdf as invoice
+2025-05-13 14:35:00,195 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:35:00,196 - document_management.processor - INFO - Archived grn_GRN8857.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:35:00,197 - document_management.processor - INFO - Processing file: grn_GRN9452.pdf
+2025-05-13 14:35:00,241 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:35:00,241 - document_management.processor - INFO - File grn_GRN9452.pdf classified as: purchase_order
+2025-05-13 14:35:00,248 - document_management.processor - INFO - Successfully extracted data from grn_GRN9452.pdf as purchase_order
+2025-05-13 14:35:00,250 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,252 - document_management.processor - INFO - Archived grn_GRN9452.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,254 - document_management.processor - INFO - Processing file: invoice_INV212524.pdf
+2025-05-13 14:35:00,291 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:35:00,292 - document_management.processor - INFO - File invoice_INV212524.pdf classified as: purchase_order
+2025-05-13 14:35:00,301 - document_management.processor - INFO - Successfully extracted data from invoice_INV212524.pdf as purchase_order
+2025-05-13 14:35:00,303 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,305 - document_management.processor - INFO - Archived invoice_INV212524.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,306 - document_management.processor - INFO - Processing file: invoice_INV283654.pdf
+2025-05-13 14:35:00,366 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:35:00,367 - document_management.processor - INFO - File invoice_INV283654.pdf classified as: purchase_order
+2025-05-13 14:35:00,377 - document_management.processor - INFO - Successfully extracted data from invoice_INV283654.pdf as purchase_order
+2025-05-13 14:35:00,379 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,382 - document_management.processor - INFO - Archived invoice_INV283654.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,383 - document_management.processor - INFO - Processing file: invoice_INV347620.pdf
+2025-05-13 14:35:00,421 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:35:00,421 - document_management.processor - INFO - File invoice_INV347620.pdf classified as: purchase_order
+2025-05-13 14:35:00,432 - document_management.processor - INFO - Successfully extracted data from invoice_INV347620.pdf as purchase_order
+2025-05-13 14:35:00,435 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,437 - document_management.processor - INFO - Archived invoice_INV347620.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,439 - document_management.processor - INFO - Processing file: invoice_INV982983.pdf
+2025-05-13 14:35:00,500 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:35:00,501 - document_management.processor - INFO - File invoice_INV982983.pdf classified as: purchase_order
+2025-05-13 14:35:00,511 - document_management.processor - INFO - Successfully extracted data from invoice_INV982983.pdf as purchase_order
+2025-05-13 14:35:00,512 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,514 - document_management.processor - INFO - Archived invoice_INV982983.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,515 - document_management.processor - INFO - Processing file: purchase_order_PO33940.pdf
+2025-05-13 14:35:00,573 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:35:00,574 - document_management.processor - INFO - File purchase_order_PO33940.pdf classified as: purchase_order
+2025-05-13 14:35:00,583 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO33940.pdf as purchase_order
+2025-05-13 14:35:00,595 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,598 - document_management.processor - INFO - Archived purchase_order_PO33940.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,599 - document_management.processor - INFO - Processing file: purchase_order_PO48135.pdf
+2025-05-13 14:35:00,660 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:35:00,661 - document_management.processor - INFO - File purchase_order_PO48135.pdf classified as: purchase_order
+2025-05-13 14:35:00,672 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO48135.pdf as purchase_order
+2025-05-13 14:35:00,674 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,676 - document_management.processor - INFO - Archived purchase_order_PO48135.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,677 - document_management.processor - INFO - Processing file: purchase_order_PO65972.pdf
+2025-05-13 14:35:00,746 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.34)
+2025-05-13 14:35:00,747 - document_management.processor - INFO - File purchase_order_PO65972.pdf classified as: invoice
+2025-05-13 14:35:00,758 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO65972.pdf as invoice
+2025-05-13 14:35:00,761 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:35:00,764 - document_management.processor - INFO - Archived purchase_order_PO65972.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:35:00,766 - document_management.processor - INFO - Processing file: purchase_order_PO7356.pdf
+2025-05-13 14:35:00,803 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:35:00,804 - document_management.processor - INFO - File purchase_order_PO7356.pdf classified as: purchase_order
+2025-05-13 14:35:00,815 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO7356.pdf as purchase_order
+2025-05-13 14:35:00,818 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:35:00,820 - document_management.processor - INFO - Archived purchase_order_PO7356.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:35:00,820 - document_management.processor - INFO - Processing file: purchase_order_PO78087.pdf
+2025-05-13 14:35:00,884 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.34)
+2025-05-13 14:35:00,884 - document_management.processor - INFO - File purchase_order_PO78087.pdf classified as: invoice
+2025-05-13 14:35:00,895 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO78087.pdf as invoice
+2025-05-13 14:35:00,897 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:35:00,900 - document_management.processor - INFO - Archived purchase_order_PO78087.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:35:00,902 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-13 14:35:00,902 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 10, 'invoice': 8, 'grn': 6}, 'processed_files': 12, 'classified_docs': {'purchase_order': 15, 'invoice': 9, 'goods_received_note': 0, 'unknown': 0}, 'extracted_docs': 24, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-13 14:35:57,289 - document_management.processor - INFO - Starting reconciliation of processed documents.
+2025-05-13 14:35:57,295 - document_management.processor - INFO - Reconciling: 8 POs, 4 Invoices, 0 GRNs
+2025-05-13 14:35:57,304 - document_management.processor - INFO - Reconciliation completed. Detailed results: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_results_detail.csv, Summary: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_summary_report.json
+2025-05-13 14:37:47,799 - document_management.processor - INFO - Clearing processed data outputs (CSVs, reconciliation reports)...
+2025-05-13 14:37:47,802 - document_management.processor - INFO - Cleared processed outputs and reset relevant stats.
+2025-05-13 14:47:52,529 - document_management.processor - INFO - Generating synthetic data: 5 POs, 4 Invoices, 3 GRNs.
+2025-05-13 14:47:52,529 - document_management.processor - INFO - Cleared previous PDFs from simulated_data_lake\generated_sample_pdfs
+2025-05-13 14:47:52,593 - document_management.processor - INFO - Synthetic PDF generation complete. Check simulated_data_lake\generated_sample_pdfs
+2025-05-13 14:48:58,142 - document_management.api - INFO - Endpoint /documents/process-data-lake called. Starting processing...
+2025-05-13 14:48:58,143 - document_management.processor - INFO - Starting document processing from data lake: simulated_data_lake\input_documents
+2025-05-13 14:48:58,144 - document_management.processor - INFO - Processing file: grn_GRN4929.pdf
+2025-05-13 14:48:58,165 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-13 14:48:58,165 - document_management.processor - INFO - File grn_GRN4929.pdf classified as: invoice
+2025-05-13 14:48:58,172 - document_management.processor - INFO - Successfully extracted data from grn_GRN4929.pdf as invoice
+2025-05-13 14:48:58,173 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:48:58,175 - document_management.processor - INFO - Archived grn_GRN4929.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:48:58,175 - document_management.processor - INFO - Processing file: grn_GRN6120.pdf
+2025-05-13 14:48:58,223 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-13 14:48:58,223 - document_management.processor - INFO - File grn_GRN6120.pdf classified as: invoice
+2025-05-13 14:48:58,231 - document_management.processor - INFO - Successfully extracted data from grn_GRN6120.pdf as invoice
+2025-05-13 14:48:58,232 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:48:58,235 - document_management.processor - INFO - Archived grn_GRN6120.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:48:58,236 - document_management.processor - INFO - Processing file: grn_GRN7072.pdf
+2025-05-13 14:48:58,292 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.35)
+2025-05-13 14:48:58,293 - document_management.processor - INFO - File grn_GRN7072.pdf classified as: invoice
+2025-05-13 14:48:58,301 - document_management.processor - INFO - Successfully extracted data from grn_GRN7072.pdf as invoice
+2025-05-13 14:48:58,303 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:48:58,306 - document_management.processor - INFO - Archived grn_GRN7072.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:48:58,307 - document_management.processor - INFO - Processing file: invoice_INV277918.pdf
+2025-05-13 14:48:58,347 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:48:58,347 - document_management.processor - INFO - File invoice_INV277918.pdf classified as: purchase_order
+2025-05-13 14:48:58,358 - document_management.processor - INFO - Successfully extracted data from invoice_INV277918.pdf as purchase_order
+2025-05-13 14:48:58,360 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,363 - document_management.processor - INFO - Archived invoice_INV277918.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,363 - document_management.processor - INFO - Processing file: invoice_INV443565.pdf
+2025-05-13 14:48:58,427 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:48:58,427 - document_management.processor - INFO - File invoice_INV443565.pdf classified as: purchase_order
+2025-05-13 14:48:58,437 - document_management.processor - INFO - Successfully extracted data from invoice_INV443565.pdf as purchase_order
+2025-05-13 14:48:58,439 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,442 - document_management.processor - INFO - Archived invoice_INV443565.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,443 - document_management.processor - INFO - Processing file: invoice_INV570124.pdf
+2025-05-13 14:48:58,505 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:48:58,505 - document_management.processor - INFO - File invoice_INV570124.pdf classified as: purchase_order
+2025-05-13 14:48:58,515 - document_management.processor - INFO - Successfully extracted data from invoice_INV570124.pdf as purchase_order
+2025-05-13 14:48:58,518 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,520 - document_management.processor - INFO - Archived invoice_INV570124.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,521 - document_management.processor - INFO - Processing file: invoice_INV988533.pdf
+2025-05-13 14:48:58,581 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.35)
+2025-05-13 14:48:58,582 - document_management.processor - INFO - File invoice_INV988533.pdf classified as: purchase_order
+2025-05-13 14:48:58,589 - document_management.processor - INFO - Successfully extracted data from invoice_INV988533.pdf as purchase_order
+2025-05-13 14:48:58,591 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,594 - document_management.processor - INFO - Archived invoice_INV988533.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,595 - document_management.processor - INFO - Processing file: purchase_order_PO17087.pdf
+2025-05-13 14:48:58,631 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:48:58,632 - document_management.processor - INFO - File purchase_order_PO17087.pdf classified as: purchase_order
+2025-05-13 14:48:58,644 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO17087.pdf as purchase_order
+2025-05-13 14:48:58,646 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,648 - document_management.processor - INFO - Archived purchase_order_PO17087.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,649 - document_management.processor - INFO - Processing file: purchase_order_PO51707.pdf
+2025-05-13 14:48:58,711 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:48:58,711 - document_management.processor - INFO - File purchase_order_PO51707.pdf classified as: purchase_order
+2025-05-13 14:48:58,722 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO51707.pdf as purchase_order
+2025-05-13 14:48:58,734 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,737 - document_management.processor - INFO - Archived purchase_order_PO51707.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,738 - document_management.processor - INFO - Processing file: purchase_order_PO73157.pdf
+2025-05-13 14:48:58,803 - document_management.ml_models - INFO - Classification result: invoice (confidence: 0.34)
+2025-05-13 14:48:58,803 - document_management.processor - INFO - File purchase_order_PO73157.pdf classified as: invoice
+2025-05-13 14:48:58,815 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO73157.pdf as invoice
+2025-05-13 14:48:58,817 - document_management.processor - INFO - Saved extracted data for invoice to simulated_data_lake\processed_data\processed_invoices.csv
+2025-05-13 14:48:58,820 - document_management.processor - INFO - Archived purchase_order_PO73157.pdf to simulated_data_lake\archived_documents\invoice
+2025-05-13 14:48:58,821 - document_management.processor - INFO - Processing file: purchase_order_PO75099.pdf
+2025-05-13 14:48:58,885 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:48:58,886 - document_management.processor - INFO - File purchase_order_PO75099.pdf classified as: purchase_order
+2025-05-13 14:48:58,900 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO75099.pdf as purchase_order
+2025-05-13 14:48:58,902 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,905 - document_management.processor - INFO - Archived purchase_order_PO75099.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,907 - document_management.processor - INFO - Processing file: purchase_order_PO85447.pdf
+2025-05-13 14:48:58,973 - document_management.ml_models - INFO - Classification result: purchase_order (confidence: 0.34)
+2025-05-13 14:48:58,974 - document_management.processor - INFO - File purchase_order_PO85447.pdf classified as: purchase_order
+2025-05-13 14:48:58,985 - document_management.processor - INFO - Successfully extracted data from purchase_order_PO85447.pdf as purchase_order
+2025-05-13 14:48:58,987 - document_management.processor - INFO - Saved extracted data for purchase_order to simulated_data_lake\processed_data\processed_purchase_orders.csv
+2025-05-13 14:48:58,990 - document_management.processor - INFO - Archived purchase_order_PO85447.pdf to simulated_data_lake\archived_documents\purchase_order
+2025-05-13 14:48:58,991 - document_management.processor - INFO - Finished processing from data lake. Processed 12 files.
+2025-05-13 14:48:58,992 - document_management.api - INFO - Processing from data lake completed with result: {'message': 'Processed 12 files from the data lake.', 'summary_stats': {'generated_pdfs': {'po': 15, 'invoice': 12, 'grn': 9}, 'processed_files': 12, 'classified_docs': {'purchase_order': 8, 'invoice': 4, 'goods_received_note': 0, 'unknown': 0}, 'extracted_docs': 12, 'extraction_errors': 0, 'reconciliation_errors': 0}}
+2025-05-13 14:50:05,033 - document_management.processor - INFO - Starting reconciliation of processed documents.
+2025-05-13 14:50:05,040 - document_management.processor - INFO - Reconciling: 8 POs, 4 Invoices, 0 GRNs
+2025-05-13 14:50:05,053 - document_management.processor - INFO - Reconciliation completed. Detailed results: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_results_detail.csv, Summary: simulated_data_lake\processed_data\reconciliation_reports\reconciliation_summary_report.json
