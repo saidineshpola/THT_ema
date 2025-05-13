@@ -140,7 +140,7 @@ Access the interactive API documentation at:
 - Includes demo setup utilities
 - Provides clear API documentation
 
-## Future Roadmap
+## Improvements for batching
 
 1. PySpark integration for distributed processing
 2. Advanced ML model integration
