@@ -1,16 +1,16 @@
 # Document Management System
 
-A FastAPI-based system for processing and reconciling procurement documents (Purchase Orders, Invoices, and Goods Received Notes).
+A FastAPI-based/PySpark system for processing and reconciling procurement documents (Purchase Orders, Invoices, and Goods Received Notes).
 
 ## Installation
 
 ```bash
-# Create and activate virtual environment
-python -m venv venv
+# Create and activate virtual environment using uv
+uv venv
 .\venv\Scripts\activate
 
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies using uv
+uv pip install -r requirements.txt
 ```
 
 ## Folder Structure
@@ -55,6 +55,8 @@ doc_management_system/
    - Reconciliation report generation
 
 4. **API Endpoints**
+   - `/ops/generate-sample-pdfs` : Generate Sample PDFS
+   - `/ops/clear-processed-data` : Generate Sample PDFS
    - `/documents/process-data-lake`: Process documents in batch
    - `/reconciliation/run`: Execute reconciliation
    - `/status/processing-stats`: View system statistics
