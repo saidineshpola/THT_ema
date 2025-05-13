@@ -12,6 +12,11 @@ uv venv
 # Install dependencies using uv
 uv pip install -r requirements.txt
 ```
+## Project Resources
+
+- [System Design Board](https://miro.com/app/board/uXjVI3KARqo=/?share_link_id=465066854732)
+- [Demo Video](https://www.youtube.com/watch?v=3WYdkWFEP7U&ab_channel=MachinePola)
+
 
 ## Folder Structure
 
@@ -54,17 +59,31 @@ doc_management_system/
    - Discrepancy identification
    - Reconciliation report generation
 
-4 **Actional Insights**
+4. **Actionable Insights**
    - Spend analysis and trend reporting
+     * Purchase order value trends
+     * Invoice payment patterns
+     * Budget utilization metrics
    - Vendor performance metrics
+     * Delivery timeline compliance
+     * Price variance analysis
+     * Quality consistency tracking
    - Classification and Error reports
+     * Document processing success rates
+     * Error classification patterns
+     * System performance metrics
+   - Dashboard Visualizations
+     * Real-time processing statistics
+     * Reconciliation status charts
 
 5. **API Endpoints**
-   - `/ops/generate-sample-pdfs` : Generate Sample PDFS
-   - `/ops/clear-processed-data` : Generate Sample PDFS
-   - `/documents/process-data-lake`: Process documents in batch
-   - `/reconciliation/run`: Execute reconciliation
-   - `/status/processing-stats`: View system statistics
+   - `/` : System health check and welcome message
+   - `/ops/generate-sample-pdfs` : Generate sample PDFs with customizable quantities
+   - `/ops/clear-processed-data` : Clear previously processed data
+   - `/documents/process-data-lake`: Process documents in batch mode
+   - `/reconciliation/run`: Execute reconciliation process
+   - `/status/processing-stats`: View detailed system statistics and generate dashboard
+   - `/ingestion/*`: Data ingestion endpoints (mounted dynamically)
 
 ### Future Enhancements
 
@@ -96,7 +115,6 @@ python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 Access the interactive API documentation at:
 - Swagger UI: `http://localhost:8000/docs`
-- ReDoc: `http://localhost:8000/redoc`
 
 ## Key Features
 
